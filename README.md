@@ -1,8 +1,14 @@
-# Project documentation guidelines
+# Project documentation guidelines - Anonymous grading
  
-The purpose of this documentation is to get aligned as a team on your deliverable at the and of the project. Start by reading the specs and general tech guidelines for the project you were assigned.
+## Roles
 
-## Introduction (250 - 350 words)
+The roles for the project members are as followed:
+* Alexandru Ion: Team Lead
+* Alexia Ionescu: Full-stack Developer
+* Vlad-Stefan Ivan: Back-end Developer
+* Alexandra Pantiru: Front-end Developer
+
+## Introduction
 
 * What is the main problem/need solved by your product?
 * What type of users does your product target?
