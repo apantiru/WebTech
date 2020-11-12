@@ -19,6 +19,11 @@ On the market, similar products can be found, such as "Canvas Release: Anonymous
 ## Application interfaces
 
 ![1](https://user-images.githubusercontent.com/52484598/98982109-83325c00-2527-11eb-8b31-b7820782144c.png)
+![2](https://user-images.githubusercontent.com/52484598/98982176-a0ffc100-2527-11eb-865d-7b92fc891567.png)
+![3](https://user-images.githubusercontent.com/52484598/98982179-a1985780-2527-11eb-8324-1957418f4375.png)
+![4](https://user-images.githubusercontent.com/52484598/98982182-a1985780-2527-11eb-9729-d922c30abc24.png)
+![5](https://user-images.githubusercontent.com/52484598/98982184-a1985780-2527-11eb-9b9e-5a46ba6cf10e.png)
+![6](https://user-images.githubusercontent.com/52484598/98982185-a230ee00-2527-11eb-985c-d75d24176010.png)
 
 ## API REST
 
