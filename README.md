@@ -239,7 +239,7 @@ Sample body
 Sample response
 ```
 { 
-        "comment": "Modified comment",
+    "comment": "Modified comment",
 	"modifiedAt":13/11/2020
 }
 ```
@@ -268,7 +268,7 @@ Sample response:
 
 Sample request
 ```
-GET api/Projects/{id}/grade
+GET api/Projects/{id}/Grade
 ```
 Sample header
 ```
@@ -285,7 +285,7 @@ Sample response
 
 Sample request
 ``` 
-POST api/Projects/{id}/grade
+POST api/Projects/{id}/Grade
 ```
 Sample header
 ```
@@ -301,7 +301,7 @@ Sample response
 ```
 { 
      "projectGrade":8,
-	    "modifiedAt":13/11/2020
+	 "modifiedAt":13/11/2020
 }
 ```
 
