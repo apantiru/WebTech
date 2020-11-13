@@ -233,14 +233,14 @@ Authorization: Bearer <token>
 Sample body
 ```
 {
-	"comment": "Modified comment"
+    "comment": "Modified comment"
 }
 ```
 Sample response
 ```
 { 
     "comment": "Modified comment",
-	"modifiedAt":13/11/2020
+    "modifiedAt":13/11/2020
 }
 ```
 
@@ -294,14 +294,14 @@ Authorization: Bearer <token>
 Sample body
 ```
 {
-	"projectGrade": 8
+    "projectGrade": 8
 }
 ```
 Sample response
 ```
 { 
-     "projectGrade":8,
-	 "modifiedAt":13/11/2020
+    "projectGrade":8,
+    "modifiedAt":13/11/2020
 }
 ```
 
