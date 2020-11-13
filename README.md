@@ -27,22 +27,340 @@ On the market, similar products can be found, such as "Canvas Release: Anonymous
 
 ## API REST
 
-* mock-ups will be made for the application interfaces (drawn on paper or using an online tool)
+### Authentication
 
 Sample requests
-
 ```
-GET /messages?search={searchParam}&orderBy={orderByParam}
+POST /api/Authentication
+```
+Sample body
+```
+{
+    "username": "JohnDoe",
+    "password": "password"
+}
+```
+Sample reponse
+```
+{
+    "authToken": "SampleToken"
+}
 ```
 
-Sample responses
+### Projects
 
-```json
-[ 
+#### Get All
+
+Sample requests
+```
+GET /api/Projects
+```
+Sample header
+```
+Authorization: Bearer <token>
+```
+Sample reponse
+```
+[
   {
-    "subject": "Some text",
-    "from": "some@email.com",
-    "message": "Some more text"
+     "id": 1,
+     "name": "John Doe",
+     "projectName": "The name of the project",
+     "link": "https://github.com",
+     "grade": 5
+  },
+  {
+     "id": 2,
+     "name": "Jane Doe",
+     "projectName": "The name of the project",
+     "link": "https://github.com/2",
+     "grade": 2
   }
 ]
-``'
+```
+
+#### Get by Id
+
+Sample requests
+```
+GET /api/Projects/{id}
+```
+Sample header
+```
+Authorization: Bearer <token>
+```
+Sample response
+```
+{
+   "id": 1,
+   "name": "John Doe",
+   "projectName": "The name of the project",
+   "link": "https://github.com",
+   "grade": 5
+}
+```
+
+#### Add project
+
+Sample requests
+```
+POST /api/Projects
+```
+Sample header
+```
+Authorization: Bearer <token>
+```
+Sample body
+```
+{
+   "projectName": "A name for the project",
+   "link": "link to the project"
+}
+```
+
+The response of the POST method will provide the link for the newly created project (/api/Projects/{id})
+
+#### Patch project
+
+Sample requests
+```
+PATCH /api/Projects/{id}
+```
+Sample header
+```
+Authorization: Bearer <token>
+```
+Sample body
+```
+{
+   "projectName":"A new name for the project"
+}
+```
+
+The response of the PATCH method will provide the link for the modified project (/api/Projects/{id})
+
+#### Delete
+```
+DELETE /api/Projects/{id}
+```
+Sample header
+```
+Authorization: Bearer <token>
+```
+Sample response:
+```
+{
+   "message" : "Deleted successfully!",
+   "statusCode" : 200
+}
+```
+
+### Comments
+
+#### Get All
+
+Sample request
+```
+GET /api/Projects/{id}/Comments
+```
+Sample header
+```
+Authorization: Bearer <token>
+```
+Sample response
+```
+[
+    { 
+        "id": 1,
+        "message": "Hello",
+        "createdAt": "13/11/2020"
+        
+     },
+     { 
+        "id": 2,
+        "message": "Hello",
+        "createdAt": "14/11/2020"
+     }
+]
+```
+
+#### Get by Id
+```
+GET api/Projects/{id}/Comments/{commentId}
+```
+Sample header
+```
+Authorization: Bearer <token>
+```
+Sample response
+```
+{
+   “id”: 1
+   “message”: ”Hello”,
+   “createdAt”: ”13/11/2020”
+}
+```
+#### POST Comment
+```
+POST api/Projects/{id}/Comments
+```
+Sample header
+```
+Authorization: Bearer <token>
+```
+Sample body: 
+```
+{
+    "message": "Hello"
+}
+```
+
+Sample response:
+
+The response of the POST method will provide the link for the newly created project (/api/Projects/{id}/Comments/{commentId})
+
+#### PUT comment
+
+Sample request
+```
+PUT api/Projects/{id}/comments/{id}
+```
+Sample header
+```
+Authorization: Bearer <token>
+```
+
+Sample body
+```
+{
+	"comment": "Modified comment"
+}
+```
+Sample response
+```
+{ 
+        "comment": "Modified comment",
+	"modifiedAt":13/11/2020
+}
+```
+
+#### Delete comment
+
+Sample request:
+```
+DELETE api/Projects/{id}/Comments/{id}
+```
+Sample header
+```
+Authorization: Bearer <token>
+```
+Sample response:
+```
+{
+   "message" : "Deleted successfully!",
+   "statusCode" : 200
+}
+```
+
+### Grades
+
+#### Get grade
+
+Sample request
+```
+GET api/Projects/{id}/grade
+```
+Sample header
+```
+Authorization: Bearer <token>
+```
+Sample response
+``` 
+{ 
+    "projectName":"The Project Name",
+    "projectGrade":10
+}
+```
+#### Give grade to project
+
+Sample request
+``` 
+POST api/Projects/{id}/grade
+```
+Sample header
+```
+Authorization: Bearer <token>
+```
+Sample body
+```
+{
+	"projectGrade": 8
+}
+```
+Sample response
+```
+{ 
+     "projectGrade":8,
+	    "modifiedAt":13/11/2020
+}
+```
+
+### Users
+
+#### Get All users
+
+Sample request:
+```
+GET /api/Users
+```
+Sample header
+```
+Authorization: Bearer <token>
+```
+Sample response:
+```
+[
+    {
+        "id" : 1,
+        "name" : "Vlad Ivan",
+        "nrOfProjects" : 3
+    }
+]
+```
+
+#### Get user by id
+
+Sample request:
+```
+GET /api/Users/{id}
+```
+Sample header
+```
+Authorization: Bearer <token>
+```
+Sample response:
+```
+{
+    "id" : 2,
+    "name" : "Alexia Ionescu",
+    "nrOfProjects" : 5
+}
+```
+
+#### Delete user
+
+Sample request:
+```
+DELETE /api/Users/{id}
+```
+Sample header
+```
+Authorization: Bearer <token>
+```
+Sample response:
+```
+{
+   "message" : "User deleted successfully!",
+   "statusCode" : 200
+}
+```
