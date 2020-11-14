@@ -5,7 +5,7 @@
 The roles for the project members are as followed:
 * Alexandru Ion: Team Lead
 * Alexia Ionescu: Solution Architect
-* Vlad-Stefan Ivan: Back-end Developer
+* Ivan Vlad-Stefan: Back-end Developer
 * Alexandra Pantiru: Front-end Developer
 
 ## Introduction
