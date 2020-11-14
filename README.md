@@ -364,3 +364,13 @@ Sample response:
    "statusCode" : 200
 }
 ```
+
+## App Components
+
+Home page: front-end/src/components/Home/Home.js -> front-end/src/components/Home/Home.css
+Register form: front-end/src/components/Regiser/Regiser.js -> front-end/src/components/Regiser/Regiser.css
+Login page: front-end/src/components/Login/Login.js -> front-end/src/components/Login/Login.css
+Logout button: front-end/src/components/Logout/Logout.js -> front-end/src/components/Logout/Logout.css
+Projects section (see all the projects + add your own): front-end/src/components/Projects/Projects.js -> front-end/src/components/Projects/Projects.css
+View your marks & your average grade + comments: front-end/src/components/Statistics/Statistics.js -> front-end/src/components/Statistics/Statistics.css
+View comments button: front-end/src/components/Comments/Comments.js -> front-end/src/components/Comments/Comments.css
